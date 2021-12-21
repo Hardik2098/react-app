@@ -36,7 +36,7 @@ metadata:
   name: react-app-service
 spec:
   #type of the service
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: react-app
   ports:
