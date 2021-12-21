@@ -1,0 +1,56 @@
+[
+  {
+    "customerId": 1,
+    "firstName": "Hardik",
+    "lastName": "Jain",
+    "email": "hardikjpr20@gmail.com",
+    "accountDetails": [
+      {
+        "accountNo": "1001",
+        "type": "Savings",
+        "branch": "Bellandur",
+        "balance": 1000
+      },
+      {
+        "accountNo": "1002",
+        "type": "Savings",
+        "branch": "Indira Nagar",
+        "balance": 2000
+      }
+    ]
+  },
+  {
+    "customerId": 2,
+    "firstName": "Sarthak",
+    "lastName": "Jain",
+    "email": "sarthakjainjpr8@gmail.com",
+    "accountDetails": [
+      {
+        "accountNo": "1003",
+        "type": "Current",
+        "branch": "Lajpat Nagar",
+        "balance": 10000
+      }
+    ]
+  },
+  {
+    "customerId": 3,
+    "firstName": "Rita",
+    "lastName": "Jain",
+    "email": "ritajpr26@gmail.com",
+    "accountDetails": [
+      {
+        "accountNo": "1004",
+        "type": "Savings",
+        "branch": "Hauz Khas",
+        "balance": 5000
+      },
+      {
+        "accountNo": "1005",
+        "type": "Current",
+        "branch": "Ganpat Nagar",
+        "balance": 1000
+      }
+    ]
+  }
+]
