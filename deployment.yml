@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  #the Deployment Name
+  name: react-app
+  labels:
+    app: react-app
+spec:
+  #the Number of Pods
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-app
+  template:
+    metadata:
+      labels:
+        app: react-app
+    spec:
+      # Container Details
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: react-app
+          # Docker Image
+          image: hardikjain2098/react-app:react-app
+          imagePullPolicy: Always
+          ports:
+            #the port on which the app can be reached out inside the container
+            - containerPort: 80
+
+---
+#service
+apiVersion: v1
+kind: Service
+metadata:
+  #the Serivce Name- it should match with the lable name of the deployment
+  name: react-app-service
+spec:
+  #type of the service
+  type: NodePort
+  selector:
+    app: react-app
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      nodePort: 30002
