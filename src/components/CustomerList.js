@@ -14,7 +14,7 @@ export default class CustomerList extends Component {
 
   componentDidMount() {
     axios
-      .get("http://127.0.0.1:52027/customer/get")
+      .get("http://127.0.0.1:55611/customer/get")
       .then((res) => {
         this.setState({ customers: res.data });
         console.log("Get request", res.data);
@@ -44,11 +44,11 @@ export default class CustomerList extends Component {
   handleDeleteYes(e, id) {
     console.log(id);
     axios
-      .delete(`http://127.0.0.1:52027/customer/delete/${id}`)
+      .delete(`http://127.0.0.1:55611/customer/delete/${id}`)
       .then((res) => {
         console.log("Delete request", res);
         axios
-          .get("http://127.0.0.1:52027/customer/get")
+          .get("http://127.0.0.1:55611/customer/get")
           .then((res) => {
             this.setState({ customers: res.data });
             console.log("Get request", res.data);
