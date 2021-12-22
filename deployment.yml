@@ -25,7 +25,7 @@ spec:
           imagePullPolicy: Always
           ports:
             #the port on which the app can be reached out inside the container
-            - containerPort: 3000
+            - containerPort: 80
 
 ---
 #service
@@ -39,6 +39,6 @@ spec:
   selector:
     app: react-app
   ports:
-    - port: 3000
-      targetPort: 3000
+    - port: 80
+      targetPort: 80
       protocol: TCP
