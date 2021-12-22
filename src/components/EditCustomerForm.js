@@ -131,7 +131,7 @@ export default class EditCustomerForm extends Component {
 
     axios
       .put(
-        `http://localhost:9000/customer/update/${this.state.customerId}`,
+        `http://127.0.0.1:54895/customer/update/${this.state.customerId}`,
         customer
       )
       .then((res) => {
