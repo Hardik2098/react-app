@@ -139,7 +139,7 @@ export default class CustomerForm extends Component {
     }
 
     axios
-      .post("http://127.0.0.1:55611/customer/new", customer)
+      .post("http://127.0.0.1:53408/customer/new", customer)
       .then((res) => {
         console.log("Post request", res);
         this.props.history.push("/customers");
